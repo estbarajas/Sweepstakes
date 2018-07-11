@@ -16,5 +16,20 @@ namespace Sweepstakes
         {
             registrationNumber = 0;
         }
+
+        public void SetFirstName(string firstName)
+        {
+            this.firstName = firstName;
+        }
+
+        public void SetLastName(string lastName)
+        {
+            this.lastName = lastName;
+        }
+
+        public void SetEmailAdress(string emailAdress)
+        {
+            this.emailAdress = emailAdress;
+        }
     }
 }
