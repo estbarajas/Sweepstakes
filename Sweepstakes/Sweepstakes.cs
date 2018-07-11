@@ -9,7 +9,14 @@ namespace Sweepstakes
     class Sweepstakes
     {
         Dictionary<int, Contestant> registeredContestants;
-        string sweepstakeName;
+        public string sweepstakeName;
+        public string Name
+        {
+            get
+            {
+                return sweepstakeName;
+            }
+        }
         public Sweepstakes(string name)
         {
             registeredContestants = new Dictionary<int, Contestant>();
@@ -19,6 +26,7 @@ namespace Sweepstakes
         public void RegisterContestant(Contestant contestant)
         {
             registeredContestants.Add(contestant.registrationNumber,contestant);
+            contestant.registrationNumber++;
         }
 
         public string PickWinner()

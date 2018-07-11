@@ -14,7 +14,7 @@ namespace Sweepstakes
         public int registrationNumber;
         public Contestant()
         {
-
+            registrationNumber = 0;
         }
     }
 }
