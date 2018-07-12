@@ -10,6 +10,7 @@ namespace Sweepstakes
     {
         Dictionary<int, Contestant> registeredContestants;
         public string sweepstakeName;
+        public int runningTotal;
         public string Name
         {
             get
@@ -25,20 +26,20 @@ namespace Sweepstakes
 
         public void RegisterContestant(Contestant contestant)
         {
-            registeredContestants.Add(contestant.registrationNumber,contestant);
-            contestant.registrationNumber++;
+            registeredContestants.Add(contestant.registrationNumber = runningTotal,contestant);
+            runningTotal++;
         }
 
         public string PickWinner()
         {
             Random random = new Random();
             int randomNumber = random.Next(0, registeredContestants.Count);
-            return "Winner: " + registeredContestants[randomNumber].firstName + " " + registeredContestants[randomNumber].lastName + " " + registeredContestants[randomNumber].registrationNumber; 
+            return "Winner: " + registeredContestants[randomNumber].firstName + " " + registeredContestants[randomNumber].lastName + " won" + " the"+ sweepstakeName; 
         }
 
         public void PrintContestantInfo(Contestant contestant)
         {
-            Console.WriteLine(PickWinner());
+            Console.WriteLine(contestant.firstName + " " + contestant.lastName + " " + contestant.registrationNumber);
         }
     }
 }
