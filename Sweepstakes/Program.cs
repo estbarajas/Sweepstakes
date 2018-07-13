@@ -22,8 +22,8 @@ namespace Sweepstakes
             sweepstake.RegisterContestant(contestant);
             
             Contestant contestant2 = new Contestant();
-            contestant2.SetFirstName("Joy");
-            contestant2.SetLastName("Madden");
+            contestant2.SetFirstName("Billy");
+            contestant2.SetLastName("Bob");
             contestant2.SetEmailAdress("Joy@gmail.com");
 
             sweepstake.RegisterContestant(contestant2);
